@@ -1,0 +1,7 @@
+file.py - gml,txt files reading and exporting to it
+graph_generation.py - Generate graph using ER,BA,WS,POWERLAW
+metrics.py - degree, in/out-degree, avg degree, avg k^2, critical threshold, clustering, avg path length, diameter
+plot_degree_distribution.py - Degree distribution plotting + comparison with Normal & Uniform (matched to empirical stats)
+attacks.py - Attack simulations (degree-based and clustering-based removals), Sandpile (avalanche) model simulation
+report.py - 
+examples.py - ER,BA,SCALE FREE,etc and assignments
