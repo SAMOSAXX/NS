@@ -31,9 +31,9 @@ def full_report(G, name="Graph"):
         degs = [d for _, d in G.degree()]
         print(f"Average degree: {np.mean(degs):.4f}")
     # Clustering
-    navg_clustering(G)
+    avg_clustering(G)
     # Threshold
-    ncritical_threshold(G)
+    critical_threshold(G)
     # path & diameter
     avg_path_and_diameter(G)
     # Visualize small
