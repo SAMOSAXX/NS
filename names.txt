@@ -5,3 +5,6 @@ plot_degree_distribution.py - Degree distribution plotting + comparison with Nor
 attacks.py - Attack simulations (degree-based and clustering-based removals), Sandpile (avalanche) model simulation
 report.py - 
 examples.py - ER,BA,SCALE FREE,etc and assignments
+type.py - find what type of graph
+new.py - full file
+jesus.py - jesus
