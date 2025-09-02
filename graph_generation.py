@@ -10,9 +10,14 @@ import warnings
 SEED = 42
 random.seed(SEED)
 np.random.seed(SEED)
+'''
+import networkx as nx
+G = nx.gnm_random_graph(1000, 4000, seed=42)
+nx.write_edgelist(G, "big_graph.edgelist", data=False)
 
-
-
+ipdi pana direct ah oru edgelist file creat agirdhu
+andha file eh nama read paniklaam - 1000 nodes and 4000 edges (eg)
+'''
 def generate_er(n, p, seed=SEED):
     return nx.erdos_renyi_graph(n, p, seed=seed)
 
