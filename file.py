@@ -33,6 +33,33 @@ def load_graph_auto(path):
             return G
         else:
             raise ValueError("CSV must have at least two columns (source, target).")
+
+    '''
+        elif ext in [".csv"]:
+        df = pd.read_csv(path, index_col=0)  # keep index for adjacency matrix check
+
+        #Case 1: adjacency matrix (square & symmetric structure)
+        if df.shape[0] == df.shape[1] and np.issubdtype(df.dtypes.values[0], np.number):
+            try:
+                G = nx.from_pandas_adjacency(df)
+                print(f"Loaded CSV adjacency matrix: nodes={G.number_of_nodes()}, edges={G.number_of_edges()}")
+                return G
+            except Exception:
+                pass  # fallback to edge list if it fails
+
+        #Case 2: edge list (at least 2 columns)
+        df = pd.read_csv(path)  # reload clean without index
+        if df.shape[1] >= 2:
+            src, tgt = df.columns[0], df.columns[1]
+            G = nx.from_pandas_edgelist(
+                df, source=src, target=tgt,
+                create_using=nx.DiGraph() if 'directed' in df.columns else nx.Graph()
+            )
+            print(f"Loaded CSV edge list: nodes={G.number_of_nodes()}, edges={G.number_of_edges()}")
+            return G
+        else:
+            raise ValueError("CSV must have at least two columns (source, target).")
+    '''
     elif ext in [".txt", ".edgelist"]:
         G = nx.read_edgelist(path, data=False)
         print(f"Loaded edge list: nodes={G.number_of_nodes()}, edges={G.number_of_edges()}")
